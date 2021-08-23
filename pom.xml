@@ -13,18 +13,45 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+
     <repositories>
         <repository>
             <id>aliyun-public</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+        <repository>
+            <id>aliyun-central</id>
+            <url>https://maven.aliyun.com/repository/central</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+
+        <pluginRepository>
+            <id>aliyun-public</id>
+            <name>aliyun-public</name>
             <url>https://maven.aliyun.com/repository/public</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
             <snapshots>
-                <enabled>true</enabled>
+                <enabled>false</enabled>
             </snapshots>
-        </repository>
-    </repositories>
+        </pluginRepository>
+
+        <pluginRepository>
+            <id>aliyun-central</id>
+            <name>aliyun-central</name>
+            <url>https://maven.aliyun.com/repository/central</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
@@ -150,17 +177,17 @@
                         </goals>
                         <configuration>
                             <tasks>
-<!--                                <delete>-->
-<!--                                    <fileset dir="D:\work\GameServer\src\main\lib" includes="*.jar"/>-->
-<!--                                </delete>-->
+                                <!--                                <delete>-->
+                                <!--                                    <fileset dir="D:\work\GameServer\src\main\lib" includes="*.jar"/>-->
+                                <!--                                </delete>-->
 
-<!--                                <mkdir dir="D:\work\GameServer\src\main\lib"/>-->
+                                <!--                                <mkdir dir="D:\work\GameServer\src\main\lib"/>-->
 
-<!--                                <copy todir="D:\work\GameServer\src\main\lib" overwrite="true">-->
-<!--                                    <fileset dir="${project.build.directory}" erroronmissingdir="false">-->
-<!--                                        <include name="*.jar"/>-->
-<!--                                    </fileset>-->
-<!--                                </copy>-->
+                                <!--                                <copy todir="D:\work\GameServer\src\main\lib" overwrite="true">-->
+                                <!--                                    <fileset dir="${project.build.directory}" erroronmissingdir="false">-->
+                                <!--                                        <include name="*.jar"/>-->
+                                <!--                                    </fileset>-->
+                                <!--                                </copy>-->
                             </tasks>
                         </configuration>
                     </execution>

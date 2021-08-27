@@ -137,15 +137,14 @@ public class JavaCoderCompile {
         Boolean call = compilationTask.call();
         if (!call) {
             StringBuilder sb = new StringBuilder();
+            sb.append("编译异常：").append("\n");
             oDiagnosticCollector.getDiagnostics().forEach(
-                    oDiagnostic -> {
-                        if (oDiagnostic.getKind() == Diagnostic.Kind.ERROR || oDiagnostic.getKind() == Diagnostic.Kind.MANDATORY_WARNING) {
-                            sb.append("\n脚本错误：").append(oDiagnostic.getMessage(Locale.SIMPLIFIED_CHINESE))
-                                    .append(" 文件：").append(oDiagnostic.getSource().getName())
-                                    .append(" line:").append(oDiagnostic.getLineNumber())
-                                    .append(" pos:").append(oDiagnostic.getStartPosition());
-                        }
-                    }
+                    oDiagnostic -> sb
+                            .append("\n").append(oDiagnostic.getKind().toString())
+                            .append(" ：").append(oDiagnostic.getMessage(Locale.SIMPLIFIED_CHINESE))
+                            .append(" 文件：").append(oDiagnostic.getSource().getName())
+                            .append(" line:").append(oDiagnostic.getLineNumber())
+                            .append(" pos:").append(oDiagnostic.getStartPosition())
             );
             throw new Exception(sb.toString());
         }

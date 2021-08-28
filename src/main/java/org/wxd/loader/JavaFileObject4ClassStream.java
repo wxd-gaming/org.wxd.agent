@@ -1,4 +1,4 @@
-package org.example.loader;
+package org.wxd.loader;
 
 import javax.tools.JavaFileObject;
 import javax.tools.SimpleJavaFileObject;

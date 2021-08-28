@@ -1,4 +1,4 @@
-package org.example.tool.io;
+package org.wxd.tool.io;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

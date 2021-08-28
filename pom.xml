@@ -4,15 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
-    <artifactId>org.example.agent</artifactId>
+    <groupId>org.wxd</groupId>
+    <artifactId>org.wxd.agent</artifactId>
+    <name>org.wxd.agent</name>
     <version>2.3.8</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
 
     <repositories>
         <repository>
@@ -113,7 +113,6 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
-                    <finalName>org.example.agent</finalName>
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
@@ -121,7 +120,7 @@
                         </manifest>
                         <manifestEntries>
                             <Manifest-Version>1.0</Manifest-Version>
-                            <Agent-Class>org.example.AgentService</Agent-Class>
+                            <Agent-Class>org.wxd.AgentService</Agent-Class>
                             <Can-Redefine-Classes>true</Can-Redefine-Classes>
                             <Can-Retransform-Classes>true</Can-Retransform-Classes>
                         </manifestEntries>

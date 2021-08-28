@@ -1,4 +1,4 @@
-package org.example.loader;
+package org.wxd.loader;
 
 import java.io.Serializable;
 

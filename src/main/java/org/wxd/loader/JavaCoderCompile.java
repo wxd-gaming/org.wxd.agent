@@ -1,9 +1,9 @@
-package org.example.loader;
+package org.wxd.loader;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.tool.io.FileUtil;
-import org.example.tool.io.FileWriteUtil;
+import org.wxd.tool.io.FileUtil;
+import org.wxd.tool.io.FileWriteUtil;
 
 import javax.tools.*;
 import java.io.File;

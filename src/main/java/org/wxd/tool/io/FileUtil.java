@@ -1,15 +1,12 @@
-package org.example.tool.io;
+package org.wxd.tool.io;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
 import java.net.URI;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.function.Consumer;
 
 /**
  * @author: Troy.Chen(失足程序员, 15388152619)

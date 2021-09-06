@@ -4,7 +4,7 @@
 热更新，热加载项目组
 
 可以加载.class文件
-可以加载.java文件
+可以加载.java文件;
 还可以加载 java code String方案;
 
 spring 项目打包请抛弃spring plugin打包方式，否者热更很麻烦

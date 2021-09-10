@@ -93,7 +93,7 @@ public class FileUtil implements Serializable {
         } else if (loop && file.isDirectory()) {
             final File[] listFiles = file.listFiles();
             for (File listFile : listFiles) {
-                loopFile(listFile, loop, fileConsumer);
+                loopFile(listFile, loop, fileConsumer, suffixs);
             }
         }
     }

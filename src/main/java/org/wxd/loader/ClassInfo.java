@@ -10,32 +10,53 @@ public class ClassInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Class<?> clazz;
-    private byte[] clazzBytes;
+    private Class<?> loadClass;
+    private byte[] loadClassBytes;
 
-    public String getSimpleName() {
-        return clazz.getSimpleName();
+    public String getLoadClassSimpleName() {
+        return loadClass.getSimpleName();
     }
 
-    public String getClassName() {
-        return clazz.getName();
+    public String getLoadClassClassName() {
+        return loadClass.getName();
     }
 
-    public Class<?> getClazz() {
-        return clazz;
+    public Class<?> getLoadClass() {
+        return loadClass;
     }
 
-    public ClassInfo setClazz(Class<?> clazz) {
-        this.clazz = clazz;
+    public ClassInfo setLoadClass(Class<?> loadClass) {
+        this.loadClass = loadClass;
         return this;
     }
 
-    public byte[] getClazzBytes() {
-        return clazzBytes;
+    public byte[] getLoadClassBytes() {
+        return loadClassBytes;
     }
 
-    public ClassInfo setClazzBytes(byte[] clazzBytes) {
-        this.clazzBytes = clazzBytes;
+    public ClassInfo setLoadClassBytes(byte[] loadClassBytes) {
+        this.loadClassBytes = loadClassBytes;
         return this;
+    }
+
+    /**
+     * 判断是否是继承关系
+     *
+     * @param clazz
+     * @return
+     */
+    public boolean isAssignableFrom(Class<?> clazz) {
+        return clazz.isAssignableFrom(this.loadClass);
+    }
+
+    /**
+     * 获取加载类的实例对象
+     *
+     * @param <R>
+     * @return
+     * @throws Exception
+     */
+    public <R> R newInstance() throws Exception {
+        return (R) this.loadClass.newInstance();
     }
 }

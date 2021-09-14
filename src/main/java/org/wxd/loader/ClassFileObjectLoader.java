@@ -33,7 +33,7 @@ public class ClassFileObjectLoader extends ClassLoader {
             try {
                 Class<?> aClass = loadClass(className);
                 final JavaFileObject4ClassStream bytes = classFileObjectMap.get(className);
-                classMap.put(className, new ClassInfo().setClazz(aClass).setClazzBytes(bytes.getCompiledBytes()));
+                classMap.put(className, new ClassInfo().setLoadClass(aClass).setLoadClassBytes(bytes.getCompiledBytes()));
             } catch (Throwable e) {
                 log.warn("加载 class bytes " + className);
                 e.printStackTrace(System.out);

@@ -96,14 +96,14 @@ public class AgentService implements Serializable {
 
         for (ClassInfo classInfo : classes) {
             /*这一步很关键，必须是从原始的classloader 获取原始的类*/
-            Class<?> oldLoadClass = loadClassMap.get(classInfo.getClassName());
+            Class<?> oldLoadClass = loadClassMap.get(classInfo.getLoadClassClassName());
             if (oldLoadClass == null) {
-                log.warn("需要被替换的原始类：" + classInfo.getClassName() + ", 并未找到");
+                log.warn("需要被替换的原始类：" + classInfo.getLoadClassClassName() + ", 并未找到");
                 continue;
             }
             try {
                 /*把类的定义与新的类文件关联起来*/
-                ClassDefinition reporterDef = new ClassDefinition(oldLoadClass, classInfo.getClazzBytes());
+                ClassDefinition reporterDef = new ClassDefinition(oldLoadClass, classInfo.getLoadClassBytes());
                 inst.redefineClasses(reporterDef);
                 log.warn("成功热更新：" + oldLoadClass.getName());
             } catch (Throwable e) {

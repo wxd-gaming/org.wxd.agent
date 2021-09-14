@@ -47,7 +47,7 @@ public class ClassBytesLoader extends ClassLoader {
             try {
                 Class<?> aClass = loadClass(className);
                 final byte[] bytes = classBytesMap.get(className);
-                classMap.put(className, new ClassInfo().setClazz(aClass).setClazzBytes(bytes));
+                classMap.put(className, new ClassInfo().setLoadClass(aClass).setLoadClassBytes(bytes));
             } catch (Throwable e) {
                 log.warn("加载 class bytes " + className);
                 e.printStackTrace(System.out);

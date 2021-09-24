@@ -10,6 +10,8 @@
     <version>2.3.8</version>
 
     <properties>
+        <java.version>1.8</java.version>
+        <encoding>UTF-8</encoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
@@ -177,19 +179,19 @@
                             <goal>run</goal>
                         </goals>
                         <configuration>
-<!--                            <tasks>-->
-                                <!--                                <delete>-->
-                                <!--                                    <fileset dir="D:\work\GameServer\src\main\lib" includes="*.jar"/>-->
-                                <!--                                </delete>-->
+                            <!--                            <tasks>-->
+                            <!--                                <delete>-->
+                            <!--                                    <fileset dir="D:\work\GameServer\src\main\lib" includes="*.jar"/>-->
+                            <!--                                </delete>-->
 
-                                <!--                                <mkdir dir="D:\work\GameServer\src\main\lib"/>-->
+                            <!--                                <mkdir dir="D:\work\GameServer\src\main\lib"/>-->
 
-                                <!--                                <copy todir="D:\work\GameServer\src\main\lib" overwrite="true">-->
-                                <!--                                    <fileset dir="${project.build.directory}" erroronmissingdir="false">-->
-                                <!--                                        <include name="*.jar"/>-->
-                                <!--                                    </fileset>-->
-                                <!--                                </copy>-->
-<!--                            </tasks>-->
+                            <!--                                <copy todir="D:\work\GameServer\src\main\lib" overwrite="true">-->
+                            <!--                                    <fileset dir="${project.build.directory}" erroronmissingdir="false">-->
+                            <!--                                        <include name="*.jar"/>-->
+                            <!--                                    </fileset>-->
+                            <!--                                </copy>-->
+                            <!--                            </tasks>-->
                         </configuration>
                     </execution>
                 </executions>

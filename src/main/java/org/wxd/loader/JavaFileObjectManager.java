@@ -55,7 +55,9 @@ public class JavaFileObjectManager extends ForwardingJavaFileManager<StandardJav
      */
     @Override
     public JavaFileObject getJavaFileForOutput(Location location, String className, JavaFileObject.Kind kind, FileObject sibling) throws IOException {
-        log.warn("compiler class name " + className);
+        if (log.isDebugEnabled()) {
+            log.debug("compiler class name " + className);
+        }
         final URI uri = URI.create(className.replaceAll("\\.", "/") + kind.extension);
         JavaFileObject4ClassStream byteClassFileObject = new JavaFileObject4ClassStream(uri, kind);
         classFileObjectLoader.addJavaFileObject(className, byteClassFileObject);

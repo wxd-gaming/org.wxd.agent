@@ -1,4 +1,4 @@
-package org.wxd.tool.io;
+package org.wxd.agent.tool.io;
 
 import java.io.File;
 import java.io.IOException;

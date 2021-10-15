@@ -1,7 +1,7 @@
-package org.wxd.loader;
+package org.wxd.agent.loader;
 
 
-import org.wxd.tool.io.FileReadUtil;
+import org.wxd.agent.tool.io.FileReadUtil;
 
 import java.io.Serializable;
 import java.util.Collection;

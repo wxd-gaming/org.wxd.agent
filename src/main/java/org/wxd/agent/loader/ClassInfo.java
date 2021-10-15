@@ -1,4 +1,4 @@
-package org.wxd.loader;
+package org.wxd.agent.loader;
 
 import java.io.Serializable;
 

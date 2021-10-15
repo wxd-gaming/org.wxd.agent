@@ -1,4 +1,4 @@
-package org.wxd.tool.io;
+package org.wxd.agent.tool.io;
 
 /**
  * @author: Troy.Chen(失足程序员, 15388152619)

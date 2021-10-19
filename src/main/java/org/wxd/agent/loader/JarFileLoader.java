@@ -14,7 +14,7 @@ import java.net.URLClassLoader;
  * 非特殊需求请调用镜头方法：addJar2UrlClassLoader
  * <p>特别鸣谢 上海-念念（qq:596889735）
  *
- * @author: Troy.Chen(失足程序员, 15388152619)
+ * @author: Troy.Chen(無心道, 15388152619)
  * @version: 2021-01-09 09:43
  **/
 @Slf4j

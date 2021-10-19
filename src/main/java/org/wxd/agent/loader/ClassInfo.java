@@ -3,7 +3,7 @@ package org.wxd.agent.loader;
 import java.io.Serializable;
 
 /**
- * @author: Troy.Chen(失足程序员, 15388152619)
+ * @author: Troy.Chen(無心道, 15388152619)
  * @version: 2021-08-06 17:10
  **/
 public class ClassInfo implements Serializable {
